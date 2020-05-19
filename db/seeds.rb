@@ -7,36 +7,35 @@
 |password|string|null: false|
 ### Association
 - has_many :comments
-- has_many :chats_users
-- has_many :chats, through: :chats_users
+- has_many :groups_users
+- has_many :groups, through: :groups_users
 
-## chatsテーブル
+## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|title|text|null: false|
-|user_id|integer|null: false, foreign_key: true|
+|title|string|null: false|
 ### Association
-- belongs_to :user
 - has_many :comments
-- has_many :chats_users
-- has_many :users, through: :chats_users
+- has_many :groups_users
+- has_many :users, through: :groups_users
 
 ## commentsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |text|text|null: false|
+|image|text||
 |user_id|integer|null: false, foreign_key: true|
-|chat_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
 ### Association
-- belongs_to :chat
+- belongs_to :group
 - belongs_to :user
 
-## chats_usersテーブル
+## groups_usersテーブル
 |Column|Type|Options|
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
-|chat_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
 
 ### Association
-- belongs_to :chat
+- belongs_to :group
 - belongs_to :user
