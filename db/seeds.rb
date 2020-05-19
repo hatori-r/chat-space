@@ -2,28 +2,28 @@
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|id|integer|null: false|
 |name|string|null: false|
 |email|string|null: false|
 |password|string|null: false|
 ### Association
-- has_many :chats
 - has_many :comments
+- has_many :chats_users
+- has_many :chats, through: :chats_users
 
 ## chatsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|id|integer|null: false|
 |title|text|null: false|
 |user_id|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
 - has_many :comments
+- has_many :chats_users
+- has_many :users, through: :chats_users
 
 ## commentsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|id|integer|null: false|
 |text|text|null: false|
 |user_id|integer|null: false, foreign_key: true|
 |chat_id|integer|null: false, foreign_key: true|
@@ -31,10 +31,9 @@
 - belongs_to :chat
 - belongs_to :user
 
-## chats-usersテーブル
+## chats_usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|id|integer|null: false|
 |user_id|integer|null: false, foreign_key: true|
 |chat_id|integer|null: false, foreign_key: true|
 
