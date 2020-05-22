@@ -1,0 +1,39 @@
+.chat-main
+  .main-header
+    .main-header__left-box
+      %h2.main-header__left-box__current-group
+        test
+      %ul.main-header__left-box__member-list
+        Member :
+        %li.main-header__left-box__member-list__member
+        masa
+    = link_to "#" do
+      .main-header__edit-btn
+        Edit
+
+  .message
+    .message__upper
+      .message__upper-info
+        %p.message__upper-info__talker
+          masa
+        %p.message__upper-info__date
+          2020/05/21(thu) 22:25:58
+      %p.message__text
+        おはよう
+
+      .message__upper-info
+        %p.message__upper-info__talker
+          masa
+        %p.message__upper-info__date
+          2020/05/21(thu) 22:25:58
+      %p.message__text
+        おはよう
+
+  .form
+    %form.new_message
+      .input-box
+        %input.input-box__text{placeholder: 'type a message', type: 'text'}
+        %label.input-box__image
+          %i.fa.fa-image
+          %input{type: 'file', class: 'input-box__image__file'}
+      %input{type: 'submit', name: 'commit', value:'Send', class: 'submit-btn'}
