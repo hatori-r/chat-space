@@ -126,76 +126,74 @@ a {
   }
 }
   
-  .message {
-    background-color: #fafafa;
-    height: calc(100vh - 100px - 90px);
-    padding: 46px 40px;
-    
-    .message__upper {
-      padding-bottom: 40px;
-    }
-    
-    .message__upper-info {
-      display: flex;
-      margin-bottom: 12px;
-    }
-    
-    .message__upper-info__talker {
-      color: #333;
-      font-size: 16px;
-      font-weight: bold;
-    }
-    
-    .message__upper-info__date {
-      color: #999;
-      font-size: 12px;
-      margin-left: 10px;
-    }
-    
-    .message__text {
-      color: #434a54;
-      font-size: 14px;
-      margin-bottom: 46px;
-    }
+.message {
+  background-color: #fafafa;
+  height: calc(100vh - 100px - 90px);
+  padding: 46px 40px;
+  
+  .message__upper {
+    padding-bottom: 40px;
   }
-    
-    .form {
+  
+  .message__upper-info {
+    display: flex;
+    margin-bottom: 12px;
+  }
+  
+  .message__upper-info__talker {
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .message__upper-info__date {
+    color: #999;
+    font-size: 12px;
+    margin-left: 10px;
+  }
+  
+  .message__text {
+    color: #434a54;
+    font-size: 14px;
+    margin-bottom: 46px;
+  }
+}
+  
+.form {
   background-color: #d2d2d2;
   height: 90px;
   padding: 20px 40px;
   
   .new_message {
     display: flex;
-  }
-  
-  .input-box {
     position: relative;
-    width: 100%;
   }
-  
-  input[type="text"] {
+
+  .input-box__text {
+    position: relative;
     font-size: 16px;
     height: 50px;
     width: 100%;
     padding: 0 40px 0 10px;
     color: #435a54;
-    border-style: none;
+    border: none;
   }
-  
+    
   .input-box__image {
     font-size: 1.3rem;
     position: absolute;
     top: 10px;
-    right: 10px;
+    right: 125px;
+  }
+  
+  .form__mask__image {
     cursor: pointer;
   }
   
-  .fa-image {
-    display: inline-block;
-    font-size: inherit;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-  }
+  // .fa-image {
+  //   font-size: inherit;
+  //   text-rendering: auto;
+  // }
   
   .input-box__image__file {
     display: none;
@@ -205,7 +203,6 @@ a {
     background-color: $skyblue;
     color: $white;
     height: 50px;
-    width: 100px;
     padding: 0 30px;
     margin-left: 15px;
     line-height: 50px;
