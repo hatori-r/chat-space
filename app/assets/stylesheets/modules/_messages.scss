@@ -56,7 +56,7 @@ a {
   background-color: #2f3e51;
   height: calc(100vh - 100px);
   padding: 0 20px;
-  overflow: scroll;
+  overflow: auto;
 
   .group {
     padding: 20px 0 40px;
@@ -131,7 +131,7 @@ a {
   background-color: #fafafa;
   height: calc(100vh - 100px - 90px);
   padding: 46px 40px;
-  overflow: scroll;
+  overflow: auto;
   
   .message__upper {
     padding-bottom: 40px;
